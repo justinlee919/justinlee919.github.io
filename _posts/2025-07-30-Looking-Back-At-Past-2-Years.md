@@ -3,6 +3,7 @@ layout: post
 title: "Reflecting on the past 2 years of my life"
 description: "Reflecting on the past 2 years of my life"
 date: 2025-07-30
+category: life
 feature_image: images/city-of-stars.png
 image_size: width-small
 ---

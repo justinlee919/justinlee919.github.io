@@ -1,0 +1,127 @@
+/* ==========================================================================
+   6. Sidebar / Sections
+   ========================================================================== */
+
+.blog-layout {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.blog-sidebar {
+  -webkit-flex: 0 0 160px;
+  flex: 0 0 160px;
+  margin-right: 40px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2.5rem;
+}
+
+.blog-main {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.sidebar-heading {
+  color: _palette(meta);
+  font-family: _font(primary);
+  font-size: 0.77778rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.sidebar-sections {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-section {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+  border-bottom: 1px solid _palette(border);
+
+  a {
+    color: _palette(secondary);
+    display: block;
+    flex: 1 1 auto;
+    font-weight: bold;
+    padding: 0.6rem 0;
+    text-decoration: none;
+    &:hover {
+      color: _palette(accent);
+    }
+  }
+
+  &.is-current a {
+    color: _palette(accent);
+  }
+}
+
+.sidebar-count {
+  color: _palette(meta);
+  font-size: 0.77778rem;
+}
+
+/* Section landing page header */
+.section-header {
+  border-bottom: 1px solid _palette(border);
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.section-title {
+  margin: 0;
+}
+
+.section-description {
+  color: _palette(meta);
+  font-family: _font(secondary);
+  font-style: italic;
+  margin: 0.5rem 0 0;
+}
+
+.section-empty {
+  color: _palette(meta);
+}
+
+/* Stack the sidebar on top on small screens */
+@media only screen and (max-width: 700px) {
+  .blog-layout {
+    display: block;
+  }
+
+  .blog-sidebar {
+    margin: 0 0 2.5rem;
+    position: static;
+  }
+
+  .sidebar-sections {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .sidebar-section {
+    border: 1px solid _palette(border);
+    border-radius: 999px;
+    margin: 0 0.5rem 0.5rem 0;
+
+    a {
+      padding: 0.35rem 0.75rem;
+    }
+
+    .sidebar-count {
+      padding-right: 0.75rem;
+    }
+  }
+}

@@ -3,6 +3,7 @@ layout: post
 title: "A Guide to Covered Calls"
 description: "Summary for the book - Covered Call For Beginners"
 date: 2025-10-02
+category: investing
 feature_image: images/covered-call-strategy.png
 image_size: width-small
 ---

@@ -37,6 +37,16 @@ navigation:
   # - text: Style Guide
   #   url: /style-guide/
 
+# Blog sections shown in the sidebar.
+# To add a section: add an item here, then create a page file that uses
+# `layout: section` with a matching `category` (see investing.md / life.md).
+# Tag a post into a section by adding `category: <slug>` to its front matter.
+sections:
+  - title: Investing
+    category: investing
+  - title: Life
+    category: life
+
 
 # Colors
 accent_color: '#2c343c'
