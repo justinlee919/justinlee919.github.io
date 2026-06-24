@@ -5,10 +5,11 @@
       <a href="{{ '/' | relative_url }}">All posts</a>
       <span class="sidebar-count">{{ site.posts | size }}</span>
     </li>
-    {% for section in site.sections %}
+    {% assign sections = site.sections | sort: "order" %}
+    {% for section in sections %}
     {% assign count = site.categories[section.category] | size %}
     <li class="sidebar-section {% if page.category == section.category %}is-current{% endif %}">
-      <a href="{{ '/' | append: section.category | append: '/' | relative_url }}">{{ section.title }}</a>
+      <a href="{{ section.url | relative_url }}">{{ section.title }}</a>
       <span class="sidebar-count">{{ count }}</span>
     </li>
     {% endfor %}

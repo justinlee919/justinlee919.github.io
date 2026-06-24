@@ -37,15 +37,8 @@ navigation:
   # - text: Style Guide
   #   url: /style-guide/
 
-# Blog sections shown in the sidebar.
-# To add a section: add an item here, then create a page file that uses
-# `layout: section` with a matching `category` (see investing.md / life.md).
-# Tag a post into a section by adding `category: <slug>` to its front matter.
-sections:
-  - title: Investing
-    category: investing
-  - title: Life
-    category: life
+# NOTE: Blog sections in the sidebar are NOT configured here. Each section is a
+# single file in the _sections/ folder. See _sections/README.md to add one.
 
 
 # Colors
@@ -68,6 +61,21 @@ paginate_path: '/page:num/'
 
 # Permalinks
 permalink: /:title
+
+# Blog sections (sidebar). Each section is one file in _sections/.
+# Defaults below auto-apply the layout + URL, so a section file only needs
+# title / category / order in its front matter. See _sections/README.md.
+collections:
+  sections:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: sections
+    values:
+      layout: section
 
 # Conversion
 markdown: kramdown
